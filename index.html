@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bill Splitter</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="container-title">Bill Splitter</h1>
+        <span class="border"></span>
+
+        <div class="bill-container">
+            <p>Total Bill</p>
+            <input type="number" name="total-bill" id="total-bill" placeholder="$">
+            <p class="border"></p>
+        </div>
+
+        <div class="friends-container">
+            <p>How many Friends?</p>
+            <span class="friends-quantity"></span>
+            <input type="range" name="friends-input" id="friends-input" min="1" max="10">
+            <p class="border"></p>
+
+        </div>
+
+        <div class="tip-container">
+            <p>Tip Percentage</p>
+            <span class="tip-percentage"></span>
+            <input type="range" name="tip-input" id="tip-input" max="20">
+            <p class="border"></p>
+        </div>
+
+        <div class="total-bill">
+            <p>Each friend pays:</p>
+            <h2 class="total-bill-result"></h2>
+        </div>
+    </div>
+</body>
+
+</html>
