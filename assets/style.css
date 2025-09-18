@@ -1,32 +1,179 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
-
-:root {
-  --font-principal: "Ubuntu", sans-serif;
-  --button-color: #c2eaba;
-  --bg-color: #484041;
-  --font-color: #8b939c;
+/* Reset e configurações básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container-title {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.border {
+  display: block;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #636e72, transparent);
+  margin: 25px 0;
+  opacity: 0.6;
+}
+
+.bill-container,
+.friends-container,
+.tip-container,
+.total-bill {
+  margin-bottom: 25px;
+}
+
+.bill-container p,
+.friends-container p,
+.tip-container p {
+  color: #2d3436;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: var(--font-principal);
+input[type="number"]:focus {
+  border-color: #6c5ce7;
+  outline: none;
 }
 
-body {
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #4e34c7;
+}
+
+.friends-quantity,
+.tip-percentage {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  color: #6c5ce7;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.split-btn {
+  width: 50%;
+  text-align: center;
+  padding: 15px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+}
+
+.split-btn:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #f5f7fa;
+  color: #6c5ce7;
+  border: 2px solid #4e34c7;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.split-btn:active {
+  transform: translateY(0);
+}
+
+.total-bill {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background: var(--bg-color);
 }
 
-.container {
+.total-bill p {
+  text-align: center;
+  color: #636e72;
+  margin-bottom: 10px;
+}
+
+.total-bill-result {
+  text-align: center;
+  color: #2d3436;
+  font-size: 32px;
+  font-weight: 700;
+  color: #6c5ce7;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container-title {
+    font-size: 24px;
+  }
 }

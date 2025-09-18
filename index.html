@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body>
+<body oninput="updateInput()">
     <div class="container">
         <h1 class="container-title">Bill Splitter</h1>
         <span class="border"></span>
@@ -21,24 +21,27 @@
 
         <div class="friends-container">
             <p>How many Friends?</p>
-            <span class="friends-quantity"></span>
-            <input type="range" name="friends-input" id="friends-input" min="1" max="10">
+            <span class="friends-quantity">0</span>
+            <input type="range" name="friends-input" id="friends-input" min="1" max="10" value="1">
             <p class="border"></p>
 
         </div>
 
         <div class="tip-container">
             <p>Tip Percentage</p>
-            <span class="tip-percentage"></span>
-            <input type="range" name="tip-input" id="tip-input" max="20">
+            <span class="tip-percentage">0%</span>
+            <input type="range" name="tip-input" id="tip-input" max="20" value="0">
             <p class="border"></p>
         </div>
 
         <div class="total-bill">
+            <button class="split-btn">Split!</button>
             <p>Each friend pays:</p>
             <h2 class="total-bill-result"></h2>
         </div>
     </div>
+
+    <script src="src/script.js"></script>
 </body>
 
 </html>
